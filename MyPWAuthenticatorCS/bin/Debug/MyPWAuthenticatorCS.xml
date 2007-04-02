@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/home/robl/work/MyPWAuthenticatorCS/MyPWAuthenticatorCS/bin/Debug/MyPWAuthenticatorCS</name>
+    </assembly>
+    <members>
+        <member name="T:Rjl.MyPW.MyPWAuthenticator">
+            <summary>MyPW Authentication client library for Mono / .NET (2.0)</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.#ctor">
+            <summary>Default Constructor</summary>
+            <remarks>This constructor doesn't set the "secret".  Therefore
+            all attemtps to use <c>Validate()</c> will return false as the hash
+            can not be properly computed without the secret.</remarks>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.#ctor(System.String)">
+            <summary>Constructor</summary>
+            <remarks>
+            </remarks>
+            <param name="secret">The <c>secret</c> is the shared secret that is
+            used to compute the validation hash with <c>Validate()</c></param>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.#ctor(System.String,System.String,System.String)">
+            <summary>This constructor makes it easy to set all the standard, static info</summary>
+            <remarks>
+            </remarks>
+            <param name="secret">The <c>secret</c> is the shared secret that is
+            used to compute the validation hash with <c>Validate()</c></param>
+            <param name="authkey">The <c>authkey</c> used to authorize requests</param>
+            <param name="siteid">The <c>siteid</c> identifies you to MyPW</param>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.Reset">
+            <summary>Resets the MyPWAuthenticator object</summary>
+            <remarks>This resets the authenticator prior to a new authentication.
+            All data is cleared except secret, siteid, and authkey.</remarks>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.SetAuthKey(System.String)">
+            <summary>Sets the <c>authkey</c></summary>
+            <remarks>
+            </remarks>
+            <param name="authkey">The <c>authkey</c> is the authkey provided by MyPW
+            and is used to authorize your client to authenticate a token for your
+            site.</param>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.SetSiteID(System.String)">
+            <summary>Sets the <c>siteid</c></summary>
+            <remarks>
+            </remarks>
+            <param name="siteid">The <c>siteid</c> identifies your site to MyPW.</param>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.SetToken(System.String,System.String)">
+            <summary>Submit the token and its value to the authenticator</summary>
+            <remarks>
+            </remarks>
+            <param name="tokenid">This is the <c>tokenid</c> the identifies a specific
+            token to MyPW.</param>
+            <param name="tokenvalue">The <c>tokenvalue</c> is the current value displayed
+            on the token's LCD</param>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.SetSiteName(System.String)">
+            <summary>Sets the optional <c>sitename</c></summary>
+            <remarks>
+            </remarks>
+            <param name="sitename">
+                <c>sitename</c> is a user (developer) defined optional
+            value that will be displayed in the transaction logs.</param>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.SetUserIP(System.String)">
+            <summary>Sets the optional <c>userip</c> value.</summary>
+            <remarks>
+            </remarks>
+            <param name="userip">The <c>userip</c> is an optional value that you
+            can submit, if you would like to track the user's IP on the transaction
+            logs</param>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.SetNote(System.String)">
+            <summary>Sets an optional note to be included in the transaction log</summary>
+            <remarks>
+            </remarks>
+            <param name="note">The <c>note</c> is the content of the note.</param>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.Authenticate">
+            <summary>Sends request to MyPW and returns a result code</summary>
+            <remarks>The result code will be:
+            	<list type="bullet"><item>-99999 = MAJOR ERROR - request couldn't be sent (networking problems?)</item><item>-99 = Site Authentication Failure (siteid/authkey)</item><item>-2 = Token disabled</item><item>-1 = Token not found. </item><item>0 = Sucess!  Authenticated!</item><item>others = see message</item></list></remarks>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.GetResponseMessage">
+            <summary>Returns the <c>message</c> from the <c>Authtenticate</c> call to MyPW</summary>
+            <remarks>If you need to display the text returned in the <c>message</c> field,
+            then this method will return it for your application to use.</remarks>
+        </member>
+        <member name="M:Rjl.MyPW.MyPWAuthenticator.Validate">
+            <summary>This method validates the response from MyPW</summary>
+            <remarks>MyPW will sign each reply with a hash comprised of
+            several values. This method computes the hash and then compares
+            it to the one returned.  If they match, the metod returns a
+            <c>bool true</c> to your application.  Otherwise it retuns
+            <c>false</c>.  <i>Note - You must have passed your shared <c>secret</c>
+            to the constructor, otherwise it will always fail validation.</i></remarks>
+        </member>
+    </members>
+</doc>
