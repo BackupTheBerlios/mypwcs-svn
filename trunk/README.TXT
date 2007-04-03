@@ -4,16 +4,14 @@ your own applications.
 Please see the source in MyPWTester to see how to use this DLL.
 
 Also, note that this was created on Mono with MonoDevelop.   The binary DLLs
-should work on MS .NET 2.0, but at this time I have not create solution/project
-files for use with MS Visual Studio 2005. It should be trival for someone with 
-access to Visual Studio 2005 to create the project/solution file.
-
+should work on MS .NET 2.0.  I have not created solution/project files for 
+use with MS Visual Studio 2005. It should be trival for someone with access to 
+Visual Studio 2005 to create the project/solution file.
 
 This code is still alpha quality.  It is functional, but still needs some work.
 
-
-
-MyPWAuthenticatorCS is Copyright 2007 by Robert J. Lawrence
+MyPWAuthenticatorCS License
+Copyright (c) 2007, Robert J. Lawrence. All rights reserved.
  
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -22,7 +20,7 @@ MyPWAuthenticatorCS is Copyright 2007 by Robert J. Lawrence
  *     * Redistributions in binary form must reproduce the above copyright
  *       notice, this list of conditions and the following disclaimer in the
  *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of the <organization> nor the
+ *     * Neither the name of the MyPWAuthenticatorCS nor the
  *       names of its contributors may be used to endorse or promote products
  *       derived from this software without specific prior written permission.
  *
