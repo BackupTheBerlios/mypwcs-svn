@@ -1,0 +1,15 @@
+MyPWAuthenticatorCS License
+Copyright (c) 2007, Robert J. Lawrence. All rights reserved.
+
+Currently, in order to build MyPWAuthenticatorCS you will need to have Mono 1.2.3+ 
+and MonoDevelop installed.
+
+Using MonoDevelop, open the "MyPWAuthenticatorCS.mdp" file, which is in the same 
+directory as this "BUILD.txt" file.  Once it has been loaded, press the "F8" key
+to build the solution.
+ 
+You can also press the "F5" key to run the MyPWTester application to see if everything
+works.
+
+In the near future, NAnt will be used to simplify building on both Mono and Microsoft
+.NET 2.0 environments. 
