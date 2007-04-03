@@ -16,7 +16,6 @@
   <Contents>
     <File name="./AssemblyInfo.cs" subtype="Code" buildaction="Compile" />
     <File name="./Logger.cs" subtype="Code" buildaction="Compile" />
-    <File name="./MyClass.cs" subtype="Code" buildaction="Compile" />
     <File name="./SimpleHttpRequest.cs" subtype="Code" buildaction="Compile" />
     <File name="./XmlRpcBoxcarRequest.cs" subtype="Code" buildaction="Compile" />
     <File name="./XmlRpcClientProxy.cs" subtype="Code" buildaction="Compile" />

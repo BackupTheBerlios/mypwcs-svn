@@ -276,7 +276,7 @@ namespace Rjl.MyPW
 		{
 			try
 			{
-				Console.WriteLine("==========================");
+				Console.WriteLine("========================================");
 				Console.WriteLine("Code: " + results["code"]);
 				Console.WriteLine("Message: " + results["message"]);
 				Console.WriteLine("Server Validate: " + results["validate"]);

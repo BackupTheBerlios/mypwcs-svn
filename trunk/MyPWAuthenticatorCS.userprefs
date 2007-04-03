@@ -3,13 +3,17 @@
   <Files>
     <File filename="Welcome" />
     <File filename="./MyPWAuthenticatorCS/MyPWAuthenticator.cs" />
+    <File filename="./MyPWTester/Main.cs" />
   </Files>
   <Views>
     <ViewMemento Id="MonoDevelop.Ide.Gui.Pads.ProjectPad">
       <TreeView>
         <Node expanded="True">
           <Node name="MyPWAuthenticatorCS" expanded="True">
-            <Node name="References" expanded="True" selected="True" />
+            <Node name="References" expanded="True" />
+          </Node>
+          <Node name="MyPWTester" expanded="True">
+            <Node name="Main.cs" expanded="False" selected="True" />
           </Node>
           <Node name="xmlrpc" expanded="True" />
         </Node>
@@ -34,7 +38,7 @@
   <Properties>
     <Properties>
       <Property key="ActiveConfiguration" value="Debug" />
-      <Property key="ActiveWindow" value="/home/robl/work/MyPWAuthenticatorCS/MyPWAuthenticatorCS/MyPWAuthenticator.cs" />
+      <Property key="ActiveWindow" value="/home/robl/work/MyPWAuthenticatorCS/MyPWTester/Main.cs" />
     </Properties>
   </Properties>
 </UserCombinePreferences>
